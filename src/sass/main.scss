@@ -1,0 +1,41 @@
+body {
+    background: #FFF;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@import'utils/mixins', 'utils/playsholder';
+@import'components/header.scss', 'components/partner';
+.logo__image {
+    width: 208px;
+}
+@media (min-width: 576px) {
+    .container {
+        width: 480px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 576x;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 768px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}

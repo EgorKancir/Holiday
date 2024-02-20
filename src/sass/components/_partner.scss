@@ -1,0 +1,105 @@
+.partner {
+    padding: 30px 0;
+    margin: 0;
+    &__content-box {
+        @extend %position-center;
+        flex-direction:column;
+        gap: 30px;
+    }
+    &__title {
+        color: #333;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 22.004px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__partners-group {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 235px 235px 235px 235px;
+    }
+    &__button {
+        padding: 12px 20px;
+        border-radius: 30px;
+        border: 2px solid #FF4E50;
+        color: #FF4E50;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14.003px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        &:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+            transition: all 0.2s linear;
+        }
+    }
+}
+.partner-card {
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 12px;
+    &__image {
+        width: 121px;
+        height: 120px;
+        flex-shrink: 0;
+    }
+    &__text-box {
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__name {
+        color: #333;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14.011px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__massage {
+        width: 220px;
+        color: #666;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14.011px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+}
+@media (min-width: 576px) {
+    .partner {
+        padding: 67px 0;
+        &__partners-group {
+            width: 100%;
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 220px 220px;
+            grid-template-rows: 235px 235px;
+        }        
+    }
+}
+@media (min-width: 992px) {
+    .partner {
+        &__partners-group {
+            justify-content: center;
+            gap: 50px;
+            grid-template-columns: 220px 220px;
+            grid-template-rows: 235px 235px;
+        }        
+    }
+}
+@media (min-width: 1200px) {
+    .partner {
+        &__partners-group {
+            grid-template-columns: 220px 220px 220px 220px;
+            grid-template-rows: 235px;
+        }        
+    }
+}
+
